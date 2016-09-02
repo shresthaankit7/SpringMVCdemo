@@ -54,6 +54,12 @@
             <artifactId>jackson-databind</artifactId>
             <version>${jackson.library}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>4.3.2.RELEASE</version>
+        </dependency>
     </dependencies>
     <build>
         <pluginManagement>
