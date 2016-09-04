@@ -1,6 +1,7 @@
 package com.ankit.service;
 
 import com.ankit.domain.Income;
+import org.springframework.context.annotation.ComponentScan;
 
 import java.util.List;
 
@@ -13,4 +14,11 @@ public interface IncomeService {
 
     List<Income> findAllIncomes();
 
+    Boolean isIncomeExists(Income income);
+
+    List<Income> findAllByYear(String year);
+
+    List<Income> findAllByMonth(String month);
+
+    void save(Income income);
 }

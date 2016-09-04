@@ -5,13 +5,14 @@ package com.ankit.domain;
  */
 public class Income {
 
-    Long id;
-    String year;
-    String month;
-    Integer income;
-    String source; // source of income
+    private Long id;
+    private String year;
+    private String month;
+    private Integer income;
+    private String source; // source of income
 
-    public Income(String year,String month,Integer income,String source){
+    public Income(Long id,String year,String month,Integer income,String source){
+        this.id = id;
         this.year = year;
         this.month = month;
         this.income = income;
@@ -51,7 +52,11 @@ public class Income {
     }
 
     public Long getId() {
-
         return id;
+    }
+
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
