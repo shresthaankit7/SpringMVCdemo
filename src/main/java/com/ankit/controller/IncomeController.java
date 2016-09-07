@@ -43,7 +43,7 @@ public class IncomeController {
         return new ResponseEntity<Income>(income,HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/income/",method = RequestMethod.POST)
+    @RequestMapping(value = "/income    /",method = RequestMethod.POST)
     public ResponseEntity<Void> createIncome(@RequestBody Income income, UriComponentsBuilder ucBuilder){
         System.out.println("New Income::: Year::" + income.getYear() + "\nMonth::" + income.getMonth());
 
