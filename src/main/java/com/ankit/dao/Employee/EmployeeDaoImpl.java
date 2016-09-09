@@ -6,13 +6,14 @@ import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 /**
  * Created by ankit07 on 9/7/16.
  */
-@Repository("employeeDao")
+@Service("employeeDao")
 public class EmployeeDaoImpl extends AbstractDAO<Integer,Employee> implements EmployeeDAO {
     @Override
     public Employee findById(int id) {
