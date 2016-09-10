@@ -17,21 +17,21 @@ import java.util.List;
 public class EmployeeServiceImpl implements EmployeeService  {
 
     @Autowired
-    private EmployeeDAO employeeDAO;
+    private EmployeeDAO employeeDao;
 
     @Override
     public Employee findById(int id) {
-        return employeeDAO.findById(id);
+        return employeeDao.findById(id);
     }
 
     @Override
     public void saveEmployee(Employee employee) {
-        employeeDAO.saveEmployee(employee);
+        employeeDao.saveEmployee(employee);
     }
 
     @Override
     public void updateEmployee(Employee employee) {
-        Employee entity = employeeDAO.findById(employee.getId());
+        Employee entity = employeeDao.findById(employee.getId());
         if(entity != null){
             entity.setName(employee.getName());
             entity.setJoiningDate(employee.getJoiningDate());
@@ -42,17 +42,17 @@ public class EmployeeServiceImpl implements EmployeeService  {
 
     @Override
     public void deleteEmployeeBySsn(String ssn) {
-        employeeDAO.deleteEmployeeBySsn(ssn);
+        employeeDao.deleteEmployeeBySsn(ssn);
     }
 
     @Override
     public List<Employee> findAllEmployee() {
-        return employeeDAO.findAllEmployees();
+        return employeeDao.findAllEmployees();
     }
 
     @Override
     public Employee findEmployeeBySsn(String ssn) {
-        return employeeDAO.findEmployeeBySsn(ssn);
+        return employeeDao.findEmployeeBySsn(ssn);
     }
 
     @Override
