@@ -1,3 +1,4 @@
+use SpringMVCdemo ;
 
 CREATE TABLE EMPLOYEE(
     id INT NOT NULL auto_increment,
